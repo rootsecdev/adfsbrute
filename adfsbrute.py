@@ -112,7 +112,7 @@ def check_activesync_user(credential,debug,proxy,test_credentials_file,counter,p
 
 def calculate_values(target):
 	s = requests.Session()
-	url = "https://login.microsoftonline.com/common/userrealm/?user=test@"+target+"&api-version=2.1&checkForMicrosoftAccount=true"
+	url = "https://login.microsoftonline.us/common/userrealm/?user=test@"+target+"&api-version=2.1&checkForMicrosoftAccount=true"
 	headers = None
 	response = s.get(url)
 	json_data = json.loads(response.text)
